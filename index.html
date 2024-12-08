@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas Completa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            margin: 5px 0;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .concluido {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .botao-remover {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .botao-remover:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Tarefas Completa</h1>
+    <input type="text" id="tarefa" placeholder="Digite uma nova tarefa">
+    <button id="adicionar">Adicionar</button>
+    <ul id="lista"></ul>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
